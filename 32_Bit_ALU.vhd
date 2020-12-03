@@ -11,7 +11,7 @@ entity ALU is
     Op_Sel  :in std_logic_vector(3 downto 0);
     Cin     :in std_logic;
     Cout    :out std_logic;
-    ALU_Out :out std_logic_vector(31 downto 0);
+    ALU_Out :out std_logic_vector(31 downto 0)
 );
 
 end ALU;
