@@ -92,3 +92,22 @@ Op_Sel <= "0110";
 wait for 20ns;
  
 -- XOR, ALU_Out = x00FF00FF
+Reg_A <= x"00FFFF00";
+Reg_B <= x"0000FFFF";
+Op_Sel <= "0111";
+wait for 20ns;
+  
+-- Shift right, ALU_Out = x7FFFFFFF
+Reg_A <= x"FFFFFFFF";
+Reg_B <= x"00000001";
+Op_Sel <= "1000";
+wait for 20ns;
+ 
+-- Shift left, ALU_Out = xFFFFFFFE and Cout = 1
+Reg_A <= x"FFFFFFFF";
+Reg_B <= x"00000001";
+Op_Sel <= "1100";
+wait for 20ns;
+wait;
+end process;
+end; 
