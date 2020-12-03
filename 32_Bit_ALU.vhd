@@ -68,5 +68,6 @@ elsif(Op_Sel(3 downto 2) = "11")then
    if(Reg_A(32-to_integer(unsigned(Reg_B)))='1')then
      Cout <= '1';
    end if;
+end if;
 end process;
 end Behavioral; 
