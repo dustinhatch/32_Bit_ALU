@@ -79,4 +79,16 @@ Reg_A <= x"FFFFFFFF";
 Op_Sel <= "0100";
 wait for 20ns;
 
--- 
+-- AND, ALU_Out = x00000000
+Reg_A <= x"FFFF0000";
+Reg_B <= x"0000FFFF";
+Op_Sel <= "0101";
+wait for 20ns;
+  
+-- OR, ALU_Out = xFFFFFFFF
+Reg_A <= x"FFFF0000";
+Reg_B <= x"0000FFFF";
+Op_Sel <= "0110";
+wait for 20ns;
+ 
+-- XOR, ALU_Out = x00FF00FF
